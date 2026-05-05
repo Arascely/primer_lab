@@ -84,9 +84,27 @@ git commit -m "Mensaje descriptivo del cambio"
 - git status
 - git branch
 ```
+## 5. Solución a Errores Comunes
+
+Durante el aprendizaje, es completamente normal toparse con errores en la terminal. Aquí tienes la solución a los más frecuentes:
+
+### Error: `bash: cd: too many arguments`
+* **Por qué pasa:** Intentaste entrar a una carpeta que tiene espacios en su nombre (por ejemplo: `Proyectos 2026`) y Git Bash se confunde, pensando que le estás dando dos rutas diferentes.
+
+* **Solución:** Siempre que una ruta tenga espacios, enciérrala entre comillas.
+```bash
+cd "C:/Ruta/A/Tus Proyectos/primer_lab"
+```
+
+### Error: `src refspec main does not match any` al hacer push
+* **Por qué pasa:** Estás intentando subir tu código a la rama `main` en GitHub, pero Git detecta que en tu computadora estás trabajando en la rama antigua llamada `master`.
+* **Solución:** Simplemente renombra tu rama local a `main` para que coincidan y vuelve a intentar subirlo.
+```bash
+git branch -m master main
+```
 
 <div style="background-color: #fff8e1; border-left: 6px solid #ffb74d; padding: 15px; border-radius: 10px; margin-top: 30px;"> 
     <p style="font-size: 0.8em; color: #e65100; margin: 0; text-align: center;"> 
-         <strong>Recuerda:</strong> Git como una gran herramienta es algo que debemos aprender, esta practica se hizo con el objetivo de saber como se usa git y poder usarlo posteriormente en el futuro como una guía personal.
+         <strong>Recordar:</strong> Git como una gran herramienta es algo que debemos aprender, esta practica se hizo con el objetivo de saber como se usa git y poder usarlo posteriormente en el futuro como una guía personal.
     </p> 
 </div>
